@@ -1,10 +1,12 @@
+import Layout from "./layouts/MainLayouts";
+
 const App = () => {
   return (
-    <div className="content-wrapper">
-      <h1 className="text-4xl text-teal-500 italic underline">
-        Hello World!
-      </h1>
-    </div>
+    <>
+      <Layout>
+        <h1>App</h1>
+      </Layout>
+    </>
   );
 }
 
