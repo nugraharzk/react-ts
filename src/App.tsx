@@ -1,13 +1,7 @@
-import Layout from "./layouts/MainLayouts";
+import Router from "./routes/Router";
 
-const App = () => {
+export default function App() {
   return (
-    <>
-      <Layout>
-        <h1>App</h1>
-      </Layout>
-    </>
+    <Router />
   );
 }
-
-export default App;
