@@ -2,12 +2,11 @@ import { NavigationMenu, NavigationMenuLink } from "@/components/ui/navigation-m
 import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
 import { AuthContext } from "@/providers/AuthProvider";
 import { useContext } from "react";
-import { useLocation, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 
 export default function Navigation () {
   const authCtx = useContext(AuthContext);
   const sidebarContext = useSidebar();
-  const params = useLocation();
   const navigate = useNavigate();
   return (
     <div className="fixed top-0 right-auto z-50 w-full">
