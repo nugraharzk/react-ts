@@ -35,11 +35,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, [user]);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const login = async (credentials: { username: string; password: string }) => {
-    // const res = await axios.post("/api/auth/login", credentials, { withCredentials: true });
-    // setUser(res.data.user);
-    setUser({ id: 1, username: "admin" });
+    const res = await axios.post("/api/auth/login", credentials, { withCredentials: true });
+    setUser(res.data.user);
     navigate("/dashboard");
   };
 
