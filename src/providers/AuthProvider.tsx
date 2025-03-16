@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, ReactNode, use } from "react";
+import { createContext, useState, useEffect, ReactNode } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
 
@@ -35,6 +35,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, [user]);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const login = async (credentials: { username: string; password: string }) => {
     // const res = await axios.post("/api/auth/login", credentials, { withCredentials: true });
     // setUser(res.data.user);
